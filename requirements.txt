@@ -2,3 +2,6 @@ aiogram==3.17.0
 python-dotenv==1.0.0
 lottie[pure]==0.6.2
 requests==2.31.0
+# Указываем конкретные версии wheels, чтобы избежать компиляции
+pydantic-core==2.27.2
+pydantic==2.10.6
