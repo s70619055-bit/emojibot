@@ -9,7 +9,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     stream=sys.stdout
 )
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 logger.info("="*50)
 logger.info("ЗАПУСК БОТА")
@@ -97,3 +97,4 @@ if name == "main":
         logger.critical(f"🚨 Критическая ошибка: {e}", exc_info=True)
         sys.exit(1)
       
+
