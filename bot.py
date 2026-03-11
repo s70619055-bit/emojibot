@@ -110,7 +110,7 @@ def generate_emoji_with_username(template_path: str, username: str, output_path:
                         layer.text.document.text = username
                         text_replaced = True
                         break
-[11.03.2026 16:38] лив.: if not text_replaced:
+ if not text_replaced:
             logger.warning(f"Не найден текстовый слой в шаблоне {template_path}")
         with gzip.open(output_path, 'wb', compresslevel=9) as f_out:
             json_str = json.dumps(animation.to_dict(), ensure_ascii=False, separators=(',', ':'))
@@ -511,4 +511,5 @@ async def on_startup(dp):
 
 if name == "main":
     executor.start_polling(dp, on_startup=on_startup, skip_updates=True)
+
 
