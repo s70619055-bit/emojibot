@@ -1,4 +1,4 @@
-[11.03.2026 16:38] лив.: import os
+import os
 import sys
 import json
 import gzip
@@ -511,3 +511,4 @@ async def on_startup(dp):
 
 if name == "main":
     executor.start_polling(dp, on_startup=on_startup, skip_updates=True)
+
